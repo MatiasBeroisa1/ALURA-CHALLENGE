@@ -1,0 +1,26 @@
+/*colores tamaños espacios*/
+/* crear un selector de clase con propiedad hidden para ocultar el elemento */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+main {
+    background-color: rgb(87, 255, 199);
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.textbox {
+    width: 500px;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: red;
+    }
+}
