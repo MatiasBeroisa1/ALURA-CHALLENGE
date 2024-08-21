@@ -1,47 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto Encriptador Alura</title>
     <link rel="stylesheet" href="./style.css">
-    
 </head>
+
 <body>
-    <header></header>
-    <main class="main"> 
-        <div class="left-container">
-            <img src="" alt="">
-        </div>
-        <div class="middle-container">
-            <textarea id="text-input" placeholder="ingrese su texto aquí" class="textbox"></textarea>
-            <p>
-                porfavor solo letras minúsculas, no utilizar mayúsculas
-            </p>
-            <div class="buttons-container">
-                <button id="encrypt-button">
-                   encriptar
+    <div class="container">
+        <img src="./alura.svg" alt="logo de alura" class="logo">
+        <div class="encriptar">
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+                placeholder="Ingrese su texto aquí"></textarea>
+            <div class="terminos">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" id="btn-encriptar">
+                    Encriptar
                 </button>
-                <button>
-                    desencriptar
+                <button class="btn-desencriptar" id="btn-desencriptar">
+                    Desencriptar
                 </button>
             </div>
         </div>
-        <div class="right-container">
-            <img src="" alt="">
-            <h4>
-                ningún mensaje ha sido encontrado
-            </h4>
-            <p>
-                aqui su texto próximo a encriptar
-            </p>
-            <p>
-                desencriptación 
-            </p>
+        <div class="derecha">
+            <div id="ocultar" class="encriptado">
+                <img src="./lupita.png" alt="foto de una persona sosteniendo una lupa" class="lupa" id="mensaje1">
+                <h2 id="mensaje2">Ningún mensaje fue encontrado</h2>                
+                <p id="mensaje3">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <textarea name="mensaje" id="mensaje" class="mensaje hidden" readonly="true"></textarea>
+            </div>
+            
         </div>
-    </main>
-    <footer></footer>
-    <script src="./index.js"></script>
+    </div>
 </body>
+<script src="index.js"></script>
+
 </html>

@@ -8,38 +8,27 @@
 //podemos hacer que el boton se resetee luego de encriptar
 //
 
-const button = document.getElementById("encrypt-button");
+const button = document.getElementById("btn-encriptar");
+const romper = document.getElementById("btn-desencriptar");
 
 button.addEventListener("click", () => {
-    let text = document.getElementById("text-input").value;
-    const limiter = text.length;
-    for (let i = 0; i < limiter; i++) { 
-        console.log(text);
-        console.log(i)
-        if (text[i] == "a") {
-            text = text.replace(text[i], "ai");
-            
-        }
-        if (text[i] == "e") {
-            text = text.replace(text[i], "enter");
-            
-        }
-        if (text[i] == "i") {
-            text = text.replace(text[i], "imes");
-            
-        }
-        if (text[i] == "o") {
-            text = text.replace(text[i], "ober");
-            
-        }
-        if (text[i] == "u") {
-            text = text.replace(text[i], "ufat");
-            
-        }
-    }
-    document.getElementById("text-input").value = text;
-    alert("texto encriptado");
+    let text = document.getElementById("texto").value;
+    let resultado = text.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+    document.getElementById("mensaje").value = resultado;
+    document.getElementById("mensaje").classList.remove("hidden");
+    document.getElementById("mensaje1").classList.add("hidden");
+    document.getElementById("mensaje2").classList.add("hidden");
+    document.getElementById("mensaje3").classList.add("hidden");
+})
 
+romper.addEventListener("click", () => {
+    let text = document.getElementById("texto").value;
+    let resultado = text.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+    document.getElementById("mensaje").value = resultado;
+    document.getElementById("mensaje").classList.remove("hidden");
+    document.getElementById("mensaje1").classList.add("hidden");
+    document.getElementById("mensaje2").classList.add("hidden");
+    document.getElementById("mensaje3").classList.add("hidden");
 })
 
 
